@@ -1,0 +1,23 @@
+reset
+
+# output
+set terminal png enhanced font "Vera,12" size 1024, 768
+set output "cache.png"
+
+# black background
+#set border linecolor rgbcolor "grey"
+#set obj 1 rectangle behind from screen 0,0 to screen 1,1
+#set obj 1 fillstyle solid 1.0 fillcolor rgbcolor "black"
+
+# labels
+set ylabel "%" textcolor rgbcolor "grey"
+
+set grid
+
+#plot 'lru.log' with lines, \
+     'ring_20.log' with lines, \
+     'ring_50.log' with lines, \
+     'ring_100.log' with lines
+
+plot 'ring_100.log' with lines, \
+    'ring_08.log' with lines
