@@ -24,7 +24,8 @@ A brief survey shows only a handful of projects that have reimplemented game con
 the TurboGrafx-16, and the Gameboy on FPGAs. The Sega Game Gear, however, seem to be untouched as we were not
 able to find an open source FPGA reimplementation. We believe reimplementing these classic game consoles in hardware
 is an important part of understanding, documenting, and educating people on their design and functionality. 
-For our project we plan to fully recreate the Sega Game Gear hardware on a FPGA.
+For our project we plan to fully recreate the Sega Game Gear hardware on a FPGA in the hope that our project
+can be used as an educational tool in the area of digital system design.
 
 \section*{Potential Approaches}
 The Game Gear hardware can be easily broken down into submodules. Major components include the Zilog Z80 CPU, 
@@ -33,7 +34,8 @@ game cartridge memory mappers. The implementation of the Zilog Z80 is outside th
 we will be using the popular open source TV80 CPU. A memory management unit will be developed to coordinate the 
 addressing of system RAM and the cartridge ROM. The cartridge ROM will initially be preloaded on a flash memory chip on
 our development board. If time allows a proper bootloader may be developed to allow game ROMs to be selected off a
-SD card. The general approach to this project will be to develop and test small modules at a time.
+SD card. We plan on implementing the submodules in order of priority: TV80 CPU, MMU, Sega Cartridge Memory Mapper, VDP,
+Sega IO Controller, Audio (YM2413).
 
 \section*{Final Implementation Description}
 Our final implementation will be a fully functioning Sega Game Gear running on an Altera DE-1 FPGA
@@ -47,6 +49,6 @@ gaming controller, such as the Sega Genesis controllers. Any Sega Game Gear ROM 
 {\bf Samir Silbak} - Linux / embedded systems / software development
 
 \section*{Advisor}
-No confirmed advisor. Possible advisors are Carla Purdy, George Purdy, or Philip Wilsey.
+Carla Purdy (carla.purdy@uc.edu)
 
 \end{document}
